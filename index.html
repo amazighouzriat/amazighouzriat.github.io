@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Amazigh Ouzriat · Gravitational-Wave Astronomy and Cosmology</title>
+<meta name="description" content="Amazigh Ouzriat, Ph.D. Gravitational-wave astronomy and cosmology. RESCEU, The University of Tokyo. LIGO-Virgo-KAGRA Collaboration.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<style>
+:root{--night:#0c1230;--night2:#151d45;--gold:#f0b94d;--paper:#f6f7fb;--ink:#1a2035;--mute:#5d6680;--rule:#dde1ec;--bs-link-color:#2f45b0;--bs-link-hover-color:#1d2d85}
+body{font-family:"IBM Plex Sans",system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.7;scroll-padding-top:70px}
+h1,h2,h3,h4,.serif{font-family:"Source Serif 4",Georgia,serif;letter-spacing:-.01em}
+.navbar{background:rgba(12,18,48,.92);backdrop-filter:blur(8px)}
+.navbar .nav-link{color:#c9d0ee;font-size:.95rem}.navbar .nav-link:hover,.navbar .nav-link:focus{color:var(--gold)}
+.navbar-brand{font-family:"Source Serif 4",serif;font-weight:600;color:#fff}
+.hero{position:relative;background:radial-gradient(1200px 500px at 80% 0,var(--night2),var(--night));color:#fff;overflow:hidden;padding:7rem 0 5rem}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%;opacity:.55}
+.hero .container{position:relative}
+.hero h1{font-size:clamp(2.6rem,6vw,4.4rem);font-weight:700;line-height:1.05}
+.hero .lead{color:#cfd6f3;max-width:40rem}
+.portrait{width:240px;height:300px;object-fit:cover;object-position:50% 22%;border-radius:1.2rem;border:3px solid rgba(240,185,77,.85);box-shadow:0 20px 50px rgba(0,0,0,.45)}
+.btn-gold{background:var(--gold);color:#17161a;border:0;font-weight:600}.btn-gold:hover{background:#ffd27a;color:#17161a}
+.btn-ghost{border:1px solid rgba(255,255,255,.4);color:#fff}.btn-ghost:hover{background:rgba(255,255,255,.12);color:#fff}
+section{padding:4.5rem 0}
+section.alt{background:var(--paper)}
+h2.sec{font-size:2rem;font-weight:700;margin-bottom:2rem}
+.lede{font-size:1.18rem;color:#2b3350}
+.theme{border-left:3px solid var(--gold);padding-left:1.1rem;margin-bottom:1.8rem}
+.theme h3{font-size:1.25rem;font-weight:600}
+.grp{font-size:1.05rem;font-weight:600;color:var(--mute);margin:2.2rem 0 1rem;padding-bottom:.4rem;border-bottom:1px solid var(--rule)}
+.pub{display:grid;grid-template-columns:3.6rem 1fr;gap:.2rem 1rem;margin-bottom:1rem;background:#fff;border:1px solid var(--rule);border-radius:1rem;padding:1.1rem 1.3rem;box-shadow:0 1px 3px rgba(12,18,48,.05);transition:transform .2s,box-shadow .2s}.pub:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(12,18,48,.1)}
+.pub .yr{color:var(--mute);font-variant-numeric:tabular-nums;font-weight:500}
+.pub .t{font-family:"Source Serif 4",serif;font-weight:600;font-size:1.08rem;line-height:1.35}
+.pub .m{color:var(--mute);font-size:.92rem}
+.pub .r{font-size:.95rem}
+.pub a{font-size:.88rem;margin-right:.7rem;text-decoration:none;font-weight:500}
+.tl{list-style:none;padding:0;margin:0}
+.tl li{display:grid;grid-template-columns:8.5rem 1fr;gap:1rem;padding:.7rem 0;border-bottom:1px solid var(--rule)}
+.tl .d{color:var(--mute);font-weight:500}
+.chip{display:inline-block;background:#e9ecf8;color:#26338a;border-radius:2rem;padding:.15rem .8rem;margin:0 .3rem .4rem 0;font-size:.88rem}
+footer{background:var(--night);color:#aab3d6;padding:2.5rem 0;font-size:.92rem}
+footer a{color:var(--gold)}
+a:focus-visible,.btn:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+@media (max-width:575px){.pub{grid-template-columns:1fr}.tl li{grid-template-columns:1fr;gap:0}.portrait{width:180px;height:225px}}
+.ico{color:var(--gold);margin-right:.65rem}
+h2.sec .ico,.grp .ico{color:#2f45b0}
+.contact{display:flex;flex-wrap:wrap;gap:.5rem 1.6rem;margin:0 0 1.6rem;padding:0;list-style:none;font-size:.95rem}
+.contact a{color:#cfd6f3;text-decoration:none}.contact a:hover{color:var(--gold)}.contact i{color:var(--gold);margin-right:.5rem}
+.stats{background:var(--night);color:#fff;padding:0 0 2.2rem;margin-top:-1px}
+.stat{display:flex;align-items:center;gap:.9rem;padding:.4rem 0}
+.stat i{width:2.8rem;height:2.8rem;border-radius:.8rem;background:rgba(240,185,77,.14);color:var(--gold);display:grid;place-items:center;font-size:1.15rem}
+.stat b{display:block;font:700 1.6rem/1 "Source Serif 4",serif}.stat span{color:#aab3d6;font-size:.88rem}
+.theme h3 i{color:#2f45b0;margin-right:.6rem}
+.card-x{background:#fff;border:1px solid var(--rule);border-radius:1rem;padding:1.2rem 1.3rem;height:100%;box-shadow:0 1px 3px rgba(12,18,48,.05);transition:transform .2s,box-shadow .2s}
+.card-x:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(12,18,48,.1)}
+.badge-d{display:inline-block;background:var(--night);color:#fff;border-radius:2rem;padding:.2rem .8rem;font-size:.82rem;margin-bottom:.7rem}
+.badge-d i{color:var(--gold);margin-right:.4rem}
+.card-x h3{font-size:1.1rem;line-height:1.35;font-weight:600}
+.course{display:flex;gap:.6rem;align-items:center;margin-bottom:.8rem;color:#26338a;font-weight:600}
+.facts{list-style:none;padding:0;margin:.8rem 0 0;font-size:.92rem;color:var(--mute)}
+.facts li{margin-bottom:.25rem}.facts i{width:1.2rem;color:#2f45b0}
+.addr{line-height:1.6}
+@media (prefers-reduced-motion:reduce){.pub,.card-x{transition:none}.pub:hover,.card-x:hover{transform:none}}
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#top">Amazigh Ouzriat</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#research">Research</a></li>
+        <li class="nav-item"><a class="nav-link" href="#publications"><i class="fa-solid fa-book-open me-2"></i>Publications</a></li>
+        <li class="nav-item"><a class="nav-link" href="#lvk">LVK service</a></li>
+        <li class="nav-item"><a class="nav-link" href="#communications">Communications</a></li>
+        <li class="nav-item"><a class="nav-link" href="#teaching">Teaching</a></li>
+        <li class="nav-item"><a class="nav-link" href="#background">Background</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <canvas id="chirp" aria-hidden="true"></canvas>
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-md-8">
+        <h1>Amazigh Ouzriat</h1>
+        <p class="lead mt-3">Gravitational-wave astronomy and cosmology. I detect compact binary mergers in LIGO-Virgo-KAGRA data and I am now turning those detections into measurements of the expansion history of the Universe.</p>
+        <p class="mb-3" style="color:#aab3d6">Research Center for the Early Universe (RESCEU), The University of Tokyo<br>Cannon group · LIGO-Virgo-KAGRA Collaboration</p>
+        <ul class="contact">
+          <li><a href="mailto:ouzriat@g.ecc.u-tokyo.ac.jp"><i class="fa-solid fa-envelope"></i>ouzriat@g.ecc.u-tokyo.ac.jp</a></li>
+          <li><a href="#contact"><i class="fa-solid fa-location-dot"></i>Science Building 4, 6F, Desk 1616</a></li>
+          <li><a href="https://www.linkedin.com/in/amazigh-ouzriat/"><i class="fa-brands fa-linkedin"></i>LinkedIn</a></li>
+          <li><a href="https://inspirehep.net/authors?q=Ouzriat"><i class="fa-solid fa-book-bookmark"></i>INSPIRE-HEP</a></li>
+        </ul>
+        <a class="btn btn-gold btn-lg me-2 mb-2" href="CV_Ouzriat.pdf"><i class="fa-solid fa-file-pdf me-2"></i>Curriculum vitae</a>
+        <a class="btn btn-ghost btn-lg me-2 mb-2" href="#publications">Publications</a>
+        <a class="btn btn-ghost btn-lg mb-2" href="Publications_Ouzriat.pdf"><i class="fa-solid fa-list-check me-2"></i>My contributions</a>
+      </div>
+      <div class="col-md-4 text-md-end">
+        <img class="portrait" src="photo.jpg" alt="Portrait of Amazigh Ouzriat">
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="stats">
+  <div class="container"><div class="row g-3">
+    <div class="col-6 col-md-3"><div class="stat"><i class="fa-solid fa-file-lines"></i><div><b>28</b><span>articles</span></div></div></div>
+    <div class="col-6 col-md-3"><div class="stat"><i class="fa-solid fa-users"></i><div><b>24</b><span>LVK collaboration papers</span></div></div></div>
+    <div class="col-6 col-md-3"><div class="stat"><i class="fa-solid fa-microphone-lines"></i><div><b>8</b><span>communications</span></div></div></div>
+    <div class="col-6 col-md-3"><div class="stat"><i class="fa-solid fa-chalkboard-user"></i><div><b>3</b><span>courses taught</span></div></div></div>
+  </div></div>
+</div>
+
+<section id="research">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-5">
+        <h2 class="sec"><i class="fa-solid fa-wave-square ico"></i>Research</h2>
+        <p class="lede">Compact binary coalescences are standard sirens: their gravitational-wave signal encodes the luminosity distance directly. My work covers the full chain, from finding the signal in noisy data to using the resulting population for cosmology.</p>
+        <p>I completed my Ph.D. at IP2I Lyon (Université Claude Bernard Lyon 1) under the supervision of Viola Sordini, and I am now joining RESCEU at The University of Tokyo, in the group of Kipp Cannon, to develop novel methods for gravitational-wave cosmology.</p>
+      </div>
+      <div class="col-lg-7">
+        <div class="theme">
+          <h3><i class="fa-solid fa-globe"></i>Gravitational-wave cosmology</h3>
+          <p>At RESCEU I will work on novel statistical methods to infer cosmological parameters from compact binary populations, accounting for selection effects and the properties of the detection pipelines. This builds directly on my earlier study of the cosmological implications of LIGO-Virgo observations and the prospects for next-generation detectors (Einstein Telescope, LISA).</p>
+        </div>
+        <div class="theme">
+          <h3><i class="fa-solid fa-satellite-dish"></i>Detection of compact binary coalescences</h3>
+          <p>I was lead analyst of the offline MBTA search in the first part of the fourth observing run (O4a). My thesis covers the search sensitivity, the background estimation, and the integration of iDQ data-quality information into the ranking. The MBTA results contributed to GWTC-4.0 and to exceptional events such as GW231123, the most massive binary black hole merger observed so far.</p>
+        </div>
+        <div class="theme">
+          <h3><i class="fa-solid fa-location-crosshairs"></i>Sky localization and detector characterization</h3>
+          <p>I quantify how adding Virgo to the LIGO network improves low-latency sky localization, and how noise transients degrade it. In parallel I contribute to data-quality products and event validation, which determine whether a candidate can be trusted for astrophysics and cosmology.</p>
+        </div>
+        <div class="theme">
+          <h3><i class="fa-solid fa-bolt"></i>Rare-event physics</h3>
+          <p>As a Master's student at CEA Saclay I developed a portable source of thermal neutrons for detector calibration, which contributed to the observation of a nuclear recoil peak at the 100 eV scale.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="publications">
+  <div class="container">
+    <h2 class="sec"><i class="fa-solid fa-book-open ico"></i>Selected publications</h2>
+    <p class="lede">28 articles to date, 24 of them LVK collaboration papers. The complete list is on <a href="https://inspirehep.net/authors?q=Ouzriat">INSPIRE-HEP</a>. My individual contributions to each paper are detailed in the <a href="Publications_Ouzriat.pdf">annotated publication list</a>.</p>
+
+    <h3 class="grp"><i class="fa-solid fa-gears ico"></i>Pipeline, methods and Ph.D. work</h3>
+    <div class="pub"><span class="yr">2025</span><div>
+      <div class="t">Characterizing low-latency sky localization in multi-detector gravitational-wave networks</div>
+      <div class="m">A. Ouzriat, V. Sordini, F. Di Renzo · preprint</div>
+      <div class="r">First-author study of the impact of Virgo and of glitches on sky localization.</div>
+      <a href="https://arxiv.org/abs/2510.21930"><i class="fa-solid fa-file-lines"></i> arXiv:2510.21930</a></div></div>
+    <div class="pub"><span class="yr">2025</span><div>
+      <div class="t">The MBTA pipeline for detecting compact binary coalescences in the fourth LIGO-Virgo-KAGRA observing run</div>
+      <div class="m">C. Alléné et al. · Class. Quantum Grav. 42, 105009</div>
+      <div class="r">Role: lead analyst of the offline MBTA search in O4a.</div>
+      <a href="https://doi.org/10.1088/1361-6382/add234"><i class="fa-solid fa-link"></i> DOI</a><a href="https://arxiv.org/abs/2501.04598"><i class="fa-solid fa-file-lines"></i> arXiv:2501.04598</a></div></div>
+    <div class="pub"><span class="yr">2025</span><div>
+      <div class="t">Search for compact binary coalescences during the first part of the fourth LIGO-Virgo-KAGRA observing run</div>
+      <div class="m">A. Ouzriat · Ph.D. thesis, Université Claude Bernard Lyon 1</div>
+      <a href="https://theses.hal.science/tel-05351845"><i class="fa-solid fa-book"></i> HAL</a></div></div>
+    <div class="pub"><span class="yr">2025</span><div>
+      <div class="t">Compact binary coalescence sensitivity estimates with injection campaigns during the LVK fourth observing run</div>
+      <div class="m">R. Essick et al. · Phys. Rev. D 112, 102001</div>
+      <div class="r">Role: production of the MBTA injection results.</div>
+      <a href="https://doi.org/10.1103/44x3-hv3y"><i class="fa-solid fa-link"></i> DOI</a><a href="https://arxiv.org/abs/2508.10638"><i class="fa-solid fa-file-lines"></i> arXiv:2508.10638</a></div></div>
+
+    <h3 class="grp"><i class="fa-solid fa-database ico"></i>GWTC-4.0 and open data</h3>
+    <div class="pub"><span class="yr">2025</span><div>
+      <div class="t">GWTC-4.0: Updating the Gravitational-Wave Transient Catalog with observations from the first part of the fourth observing run</div>
+      <div class="m">LVK Collaboration · preprint</div>
+      <div class="r">Role: production of MBTA detections.</div>
+      <a href="https://arxiv.org/abs/2508.18082"><i class="fa-solid fa-file-lines"></i> arXiv:2508.18082</a></div></div>
+    <div class="pub"><span class="yr">2025</span><div>
+      <div class="t">GWTC-4.0: Methods for identifying and characterizing gravitational-wave transients</div>
+      <div class="m">LVK Collaboration · preprint</div>
+      <div class="r">Role: paper writing team, event validation and data quality.</div>
+      <a href="https://arxiv.org/abs/2508.18081"><i class="fa-solid fa-file-lines"></i> arXiv:2508.18081</a></div></div>
+    <div class="pub"><span class="yr">2025</span><div>
+      <div class="t">GWTC-4.0: Population properties of merging compact binaries</div>
+      <div class="m">LVK Collaboration · preprint</div>
+      <div class="r">Role: MBTA simulations used to model selection effects in the population analysis.</div>
+      <a href="https://arxiv.org/abs/2508.18083"><i class="fa-solid fa-file-lines"></i> arXiv:2508.18083</a></div></div>
+    <div class="pub"><span class="yr">2025</span><div>
+      <div class="t">Open data from LIGO, Virgo, and KAGRA through the first part of the fourth observing run</div>
+      <div class="m">LVK Collaboration · preprint</div>
+      <div class="r">Role: paper writing team, detector characterization.</div>
+      <a href="https://arxiv.org/abs/2508.18079"><i class="fa-solid fa-file-lines"></i> arXiv:2508.18079</a></div></div>
+
+    <h3 class="grp"><i class="fa-solid fa-star ico"></i>Exceptional events</h3>
+    <div class="pub"><span class="yr">2025</span><div>
+      <div class="t">GW231123: a binary black hole merger with total mass 190–265 M<sub>☉</sub></div>
+      <div class="m">LVK Collaboration · Astrophys. J. Lett. 993, L25</div>
+      <div class="r">Role: production of MBTA detection results.</div>
+      <a href="https://doi.org/10.3847/2041-8213/ae0c9c"><i class="fa-solid fa-link"></i> DOI</a><a href="https://arxiv.org/abs/2507.08219"><i class="fa-solid fa-file-lines"></i> arXiv:2507.08219</a></div></div>
+    <div class="pub"><span class="yr">2025</span><div>
+      <div class="t">GW241011 and GW241110: exploring binary formation and fundamental physics with asymmetric, high-spin black hole coalescences</div>
+      <div class="m">LVK Collaboration · Astrophys. J. Lett. 993, L21</div>
+      <div class="r">Role: paper writing team, analysis of signal significance.</div>
+      <a href="https://doi.org/10.3847/2041-8213/ae0d54"><i class="fa-solid fa-link"></i> DOI</a></div></div>
+    <div class="pub"><span class="yr">2024</span><div>
+      <div class="t">Observation of gravitational waves from the coalescence of a 2.5–4.5 M<sub>☉</sub> compact object and a neutron star</div>
+      <div class="m">LVK Collaboration · Astrophys. J. Lett. 970, L34</div>
+      <div class="r">Role: production of MBTA detection results.</div>
+      <a href="https://doi.org/10.3847/2041-8213/ad5beb"><i class="fa-solid fa-link"></i> DOI</a><a href="https://arxiv.org/abs/2404.04248"><i class="fa-solid fa-file-lines"></i> arXiv:2404.04248</a></div></div>
+
+    <h3 class="grp"><i class="fa-solid fa-atom ico"></i>Experimental nuclear and particle physics</h3>
+    <div class="pub"><span class="yr">2023</span><div>
+      <div class="t">Observation of a nuclear recoil peak at the 100 eV scale induced by neutron capture</div>
+      <div class="m">H. Abele et al. · Phys. Rev. Lett. 130, 211802</div>
+      <div class="r">Role: main developer of the portable thermal-neutron source, and simulations.</div>
+      <a href="https://doi.org/10.1103/PhysRevLett.130.211802"><i class="fa-solid fa-link"></i> DOI</a><a href="https://arxiv.org/abs/2211.03631"><i class="fa-solid fa-file-lines"></i> arXiv:2211.03631</a></div></div>
+  </div>
+</section>
+
+<section id="lvk">
+  <div class="container">
+    <h2 class="sec"><i class="fa-solid fa-users-gear ico"></i>Service in the LIGO-Virgo-KAGRA Collaboration</h2>
+    <ul class="tl">
+      <li><span class="d">2024 – present</span><span>Paper writing teams for key collaboration papers (O4a Open Data, GWTC-4.0 Methods) and science case study teams for several exceptional events.</span></li>
+      <li><span class="d">2023 – present</span><span>Liaison between Virgo detector characterization and the Operations and CBC groups; liaison between the MBTA pipeline and the Rates &amp; Populations group.</span></li>
+      <li><span class="d">2023 – present</span><span>O4 Rapid Response Team for real-time event vetting, and catalog duty manager.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="alt" id="communications">
+  <div class="container">
+    <h2 class="sec"><i class="fa-solid fa-microphone-lines ico"></i>Communications</h2>
+    <div class="row g-3">
+      <div class="col-md-6"><div class="card-x"><span class="badge-d"><i class="fa-solid fa-calendar"></i>Nov 2025 · Tokyo, Japan</span><h3>Unveiling the sky with gravitational waves: discoveries from GWTC-4</h3><p class="text-secondary small mb-0"><i class="fa-solid fa-microphone-lines ico"></i>International Conference on the Physics of the 2 Infinities</p></div></div>
+      <div class="col-md-6"><div class="card-x"><span class="badge-d"><i class="fa-solid fa-calendar"></i>Feb 2025 · Cascina, Italy</span><h3>Impact of Virgo inclusion on GW sky localization and effect of glitches</h3><p class="text-secondary small mb-0"><i class="fa-solid fa-microphone-lines ico"></i>Virgo Collaboration Meeting</p></div></div>
+      <div class="col-md-6"><div class="card-x"><span class="badge-d"><i class="fa-solid fa-calendar"></i>Sep 2024 · Barcelona, Spain</span><h3>Search for compact binary coalescences using the offline MBTA pipeline</h3><p class="text-secondary small mb-0"><i class="fa-solid fa-microphone-lines ico"></i>LIGO-Virgo-KAGRA Collaboration Meeting</p></div></div>
+      <div class="col-md-6"><div class="card-x"><span class="badge-d"><i class="fa-solid fa-calendar"></i>Jul 2024 · Noirmoutier, France</span><h3>Observations of compact binary coalescences by the LVK Collaboration</h3><p class="text-secondary small mb-0"><i class="fa-solid fa-microphone-lines ico"></i>International Conference “Exploring the Dark Side of the Universe: Tools”</p></div></div>
+      <div class="col-md-6"><div class="card-x"><span class="badge-d"><i class="fa-solid fa-calendar"></i>Mar 2024 · Louisiana, USA</span><h3>First results of the standard MBTA offline search during the first half of the fourth observing run (O4a)</h3><p class="text-secondary small mb-0"><i class="fa-solid fa-microphone-lines ico"></i>LIGO-Virgo-KAGRA Collaboration Meeting</p></div></div>
+      <div class="col-md-6"><div class="card-x"><span class="badge-d"><i class="fa-solid fa-calendar"></i>Sep 2023 · Toyama, Japan</span><h3>Investigating iDQ integration into the MBTA offline search</h3><p class="text-secondary small mb-0"><i class="fa-solid fa-microphone-lines ico"></i>LIGO-Virgo-KAGRA Collaboration Meeting</p></div></div>
+      <div class="col-md-6"><div class="card-x"><span class="badge-d"><i class="fa-solid fa-calendar"></i>Apr 2023 · Cascina, Italy</span><h3>Investigating iDQ integration into the MBTA offline search</h3><p class="text-secondary small mb-0"><i class="fa-solid fa-microphone-lines ico"></i>Virgo Collaboration Meeting</p></div></div>
+      <div class="col-md-6"><div class="card-x"><span class="badge-d"><i class="fa-solid fa-calendar"></i>Jul 2022 · Saclay, France</span><h3>Open physics problems during the International Physicist Tournament</h3><p class="text-secondary small mb-0"><i class="fa-solid fa-microphone-lines ico"></i>Seminar, CEA Institute of Research into the Fundamental Laws of the Universe (IRFU)</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="teaching">
+  <div class="container">
+    <h2 class="sec"><i class="fa-solid fa-chalkboard-user ico"></i>Teaching</h2>
+    <p class="lede"><i class="fa-solid fa-building-columns ico"></i>Teaching assistant at <strong>Université Claude Bernard Lyon 1</strong> (Faculty of Sciences and Technology) throughout my Ph.D., from 2023 to 2025, in three undergraduate courses covering electromagnetism, general physics and scientific programming.</p>
+    <div class="row g-3 mt-2">
+      <div class="col-lg-4"><div class="card-x"><div class="course"><i class="fa-solid fa-book-open-reader"></i>PHY2000E</div><h3>Fundamentals of Physics</h3>
+        <ul class="facts"><li><i class="fa-solid fa-calendar-days"></i>Spring 2024 and Spring 2025</li><li><i class="fa-solid fa-user-graduate"></i>Undergraduate medical students (physics minor)</li><li><i class="fa-solid fa-list"></i>Optics, electromagnetism, mechanics and the mathematical tools they rely on.</li></ul></div></div>
+      <div class="col-lg-4"><div class="card-x"><div class="course"><i class="fa-solid fa-book-open-reader"></i>PHY2021L</div><h3>Electromagnetism</h3>
+        <ul class="facts"><li><i class="fa-solid fa-calendar-days"></i>Fall 2023 and Fall 2024</li><li><i class="fa-solid fa-user-graduate"></i>Physics and Chemistry undergraduates</li><li><i class="fa-solid fa-list"></i>Electrostatics, magnetostatics, electromagnetic induction and electromagnetic waves.</li></ul></div></div>
+      <div class="col-lg-4"><div class="card-x"><div class="course"><i class="fa-solid fa-book-open-reader"></i>TVL1212L</div><h3>Initiation to Python</h3>
+        <ul class="facts"><li><i class="fa-solid fa-calendar-days"></i>Fall 2023</li><li><i class="fa-solid fa-user-graduate"></i>Physics and Chemistry undergraduates</li><li><i class="fa-solid fa-list"></i>Programming fundamentals, from syntax to statistics and plotting, for scientific data handling.</li></ul></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="background">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-7">
+        <h2 class="sec"><i class="fa-solid fa-graduation-cap ico"></i>Background</h2>
+        <ul class="tl">
+          <li><span class="d">2025 –</span><span><strong>RESCEU, The University of Tokyo</strong>, Cannon group: gravitational-wave cosmology.</span></li>
+          <li><span class="d">2022 – 2025</span><span><strong>Ph.D., gravitational-wave astronomy</strong>, IP2I, Université Claude Bernard Lyon 1. Advisor: Viola Sordini.</span></li>
+          <li><span class="d">2020 – 2022</span><span><strong>M.Sc., fundamental physics</strong> (nuclei, particles, astroparticles and cosmology), Paris-Saclay University.</span></li>
+          <li><span class="d">2021</span><span>Research internship, CEA Saclay IRFU, with David Lhuillier.</span></li>
+          <li><span class="d">2017 – 2020</span><span><strong>B.Sc., physics</strong>, Université Claude Bernard Lyon 1.</span></li>
+        </ul>
+      </div>
+      <div class="col-lg-5">
+        <h2 class="sec"><i class="fa-solid fa-code ico"></i>Skills</h2>
+        <p><span class="chip">Python</span><span class="chip">C/C++</span><span class="chip">R</span><span class="chip">SQL</span><span class="chip">Bash</span><span class="chip">Git, CI/CD</span><span class="chip">SLURM</span><span class="chip">HTCondor</span><span class="chip">Docker</span><span class="chip">Kubernetes</span><span class="chip">NumPy</span><span class="chip">pandas</span><span class="chip">scikit-learn</span><span class="chip">PyTorch</span></p>
+        <p class="text-secondary">Languages: Berber (native), Arabic, French, English (fluent).</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="container"><div class="row g-4">
+    <div class="col-md-7 addr">
+      <strong class="text-white fs-5 serif">Amazigh Ouzriat</strong><br>
+      <i class="fa-solid fa-location-dot ico"></i>Research Center for the Early Universe (RESCEU)<br>
+      Graduate School of Science, The University of Tokyo<br>
+      Science Building 4, 6F, Desk 1616<br>
+      7-3-1 Hongo, Bunkyo-ku, Tokyo 113-0033, Japan<br>
+      <a href="https://www.google.com/maps/search/?api=1&amp;query=Science+Building+4+University+of+Tokyo+Hongo+Campus">Open in Maps</a>
+    </div>
+    <div class="col-md-5">
+      <div class="mb-2"><i class="fa-solid fa-envelope ico"></i><a href="mailto:ouzriat@g.ecc.u-tokyo.ac.jp">ouzriat@g.ecc.u-tokyo.ac.jp</a></div>
+      <div class="mb-2"><i class="fa-brands fa-linkedin ico"></i><a href="https://www.linkedin.com/in/amazigh-ouzriat/">LinkedIn</a></div>
+      <div class="mb-2"><i class="fa-solid fa-book-bookmark ico"></i><a href="https://inspirehep.net/authors?q=Ouzriat">INSPIRE-HEP</a></div>
+      <div><i class="fa-solid fa-file-pdf ico"></i><a href="CV_Ouzriat.pdf">Curriculum vitae (PDF)</a></div>
+    </div>
+  </div></div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+// Gravitational-wave chirp: amplitude and frequency rise towards merger, then ringdown.
+(function(){
+  var c=document.getElementById('chirp'),x=c.getContext('2d'),w,h,t0=null;
+  var still=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function size(){var r=c.getBoundingClientRect(),d=window.devicePixelRatio||1;w=c.width=r.width*d;h=c.height=r.height*d;draw(still?1:0)}
+  function draw(p){
+    x.clearRect(0,0,w,h);x.lineWidth=2*(window.devicePixelRatio||1);x.strokeStyle='#f0b94d';x.beginPath();
+    var n=900,mid=h*.62,tm=.72;
+    for(var i=0;i<=n;i++){
+      var u=i/n,tau=Math.max(tm-u,.004),y;
+      if(u<tm){var A=Math.pow(tau,-.25)*.07,ph=-Math.pow(tau,.625)*95+p*0;y=A*Math.sin(ph+(still?0:-t0*0))}
+      else{var d=u-tm;y=.5*Math.exp(-d*28)*Math.sin(d*260)}
+      var px=u*w,py=mid-y*h*.55;
+      i?x.lineTo(px,py):x.moveTo(px,py);
+    }
+    x.stroke();
+  }
+  function loop(ts){
+    if(t0===null)t0=ts;
+    var cyc=9000,p=((ts-t0)%cyc)/cyc;
+    // reveal the signal progressively, then hold
+    x.clearRect(0,0,w,h);
+    var reveal=Math.min(1,p*1.6);
+    x.save();x.beginPath();x.rect(0,0,w*reveal,h);x.clip();draw(1);x.restore();
+    requestAnimationFrame(loop);
+  }
+  window.addEventListener('resize',size);size();
+  if(!still)requestAnimationFrame(loop);
+})();
+</script>
+</body>
+</html>
